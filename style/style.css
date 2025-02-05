@@ -1,24 +1,68 @@
-.parent{
-    width: 80%;
+.parent {
+
+    /* width: 80%; */
     margin: 0 auto;
 }
-.logo{
+
+.logo {
     font-family: "Roboto", sans-serif;
     color: #ff305b;
-    display: block;
     font-size: 24px;
-    font-weight: 800;
-    padding: 18px 0 0 30px;
+    font-weight: 700;
+    padding: 10px 0 0 190px;
+    z-index: 1;
 }
-ul{
-    list-style: none;
-    padding-right: 50px;
-}
-ul li{
-    font-family: "Roboto", sans-serif;
-    color: #000000;
-    font-size: 16px;
-    font-weight: 400;
-    padding:10px 2px;
 
+ul {
+    list-style: none;
+    /* padding-right: 50px; */
+    padding: 0 205px 0 0;
+    z-index: 1;
+}
+
+ul li {
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    padding: 10px 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li:hover {
+    color: #ff305b;
+    cursor: pointer;
+}
+
+ul li::selection {
+    color: white;
+    background-color: #ff305b;
+}
+
+.navbar {
+    align-items: flex-start;
+    background-image: url(../assets/slider-02.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    position: relative;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
 }
