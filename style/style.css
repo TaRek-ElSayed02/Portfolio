@@ -30,6 +30,10 @@ ul li {
     transition: all 0.3s ease-in-out;
 }
 
+.active {
+    color: #ff305b;
+}
+
 ul li:hover {
     color: #ff305b;
     cursor: pointer;
@@ -40,23 +44,7 @@ ul li::selection {
     background-color: #ff305b;
 }
 
-.navbar {
-    align-items: flex-start;
-    background-image: url(../assets/slider-02.jpg);
-    width: 100%;
-    height: 100vh;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-    position: relative;
-}
-
-.navbar::before {
+.parent::before {
     content: "";
     position: absolute;
     top: 0;
@@ -64,5 +52,129 @@ ul li::selection {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 0;
+    z-index: 1;
 }
+
+.parent {
+    margin: 0 auto;
+    position: relative; /* Ensure child elements can be positioned absolutely */
+}
+
+.navbar {
+    align-items: flex-start;
+    background-image: url(../assets/slider-02.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+.navbar-content h3 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.navbar-content h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #ff305b;
+}
+
+.navbar-content p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 0 0 10px;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1; /* Ensure it's above the background image but below the content */
+}
+
+
+.text {
+    display: inline-block;
+    border-right: 5px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24px;
+}
+
+/* Alternate words with same speed */
+.alternate-text::after {
+    content: "Designer";  /* Default word */
+    animation: typing 4s steps(9, end) infinite, blink 1s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    0% { content: "D"; }
+    3% { content: "De"; }
+    6% { content: "Des"; }
+    9% { content: "Desi"; }
+    12% { content: "Desig"; }
+    15% { content: "Design"; }
+    18% { content: "Designe"; }
+    21% { content: "Designer "; } 
+    24% { content: "Designer "; } 
+
+    27% { content: "Designe"; }
+    30% { content: "Design"; }
+    33% { content: "Desig"; }
+    36% { content: "Desi"; }
+    39% { content: "Des"; }
+    42% { content: "De"; }
+    45% { content: "D"; }
+    48% { content: ""; }
+
+    51% { content: "D"; }
+    54% { content: "De"; }
+    57% { content: "Dev"; }
+    60% { content: "Deve"; }
+    63% { content: "Devel"; }
+    66% { content: "Develo"; }
+    69% { content: "Develop"; }
+    72% { content: "Develope"; }
+    75% { content: "Developer"; }
+    78% { content: "Develope"; }
+    81% { content: "Develop"; }
+    84% { content: "Develo"; }
+    87% { content: "Devel"; }
+    90% { content: "Deve"; }
+    93% { content: "Dev"; }
+    96% { content: "De"; }
+    99% { content: "D"; }
+    100% { content: ""; }
+}
+
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+
