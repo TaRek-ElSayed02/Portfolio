@@ -1,0 +1,24 @@
+.parent{
+    width: 80%;
+    margin: 0 auto;
+}
+.logo{
+    font-family: "Roboto", sans-serif;
+    color: #ff305b;
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    padding: 18px 0 0 30px;
+}
+ul{
+    list-style: none;
+    padding-right: 50px;
+}
+ul li{
+    font-family: "Roboto", sans-serif;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    padding:10px 2px;
+
+}
