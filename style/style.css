@@ -57,7 +57,7 @@ ul li::selection {
 
 .parent {
     margin: 0 auto;
-    position: relative; /* Ensure child elements can be positioned absolutely */
+    position: relative; 
 }
 
 .navbar {
@@ -78,7 +78,7 @@ ul li::selection {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 2; /* Ensure it's above the overlay */
+    z-index: 2; 
 }
 
 .navbar-content h3 {
@@ -112,7 +112,7 @@ ul li::selection {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1; /* Ensure it's above the background image but below the content */
+    z-index: 1; 
 }
 
 
@@ -124,9 +124,8 @@ ul li::selection {
     font-size: 24px;
 }
 
-/* Alternate words with same speed */
 .alternate-text::after {
-    content: "Designer";  /* Default word */
+    content: "Designer";  
     animation: typing 4s steps(9, end) infinite, blink 1s step-end infinite;
 }
 
@@ -171,8 +170,6 @@ ul li::selection {
     100% { content: ""; }
 }
 
-
-/* Blinking cursor effect */
 @keyframes blink {
     50% { border-color: transparent; }
 }
