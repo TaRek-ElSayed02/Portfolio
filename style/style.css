@@ -287,7 +287,7 @@
 
 div.about {
     display: flex;
-    width: 65%;
+    width: 67%;
     margin: 100px auto;
 }
 
@@ -356,5 +356,33 @@ div.about-img::before {
     transform: translateY(-5px);
 }
 
+
+
+
+div.about-content {
+    margin-left: 70px;
+}
+
+.about-content h2{
+    font-size: 34px;
+    font-weight: 600;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.about-content h2::before {
+    content: "";
+    width: 5px;
+    height: 23px;
+    background-color: #ff305b;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.about-content p {
+    color: #555555;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
 
 
