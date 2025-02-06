@@ -2,6 +2,7 @@
 
     /* width: 80%; */
     margin: 0 auto;
+
 }
 
 .logo {
@@ -13,14 +14,18 @@
     z-index: 1;
 }
 
-ul {
+.logo:hover {
+    cursor: pointer;
+}
+
+.unordered {
     list-style: none;
     /* padding-right: 50px; */
     padding: 0 205px 0 0;
     z-index: 1;
 }
 
-ul li {
+.unordered li {
     font-family: "Roboto", sans-serif;
     color: #FFFFFF;
     font-size: 16px;
@@ -34,12 +39,12 @@ ul li {
     color: #ff305b;
 }
 
-ul li:hover {
+.unordered li:hover {
     color: #ff305b;
     cursor: pointer;
 }
 
-ul li::selection {
+.unordered li::selection {
     color: white;
     background-color: #ff305b;
 }
@@ -57,7 +62,7 @@ ul li::selection {
 
 .parent {
     margin: 0 auto;
-    position: relative; 
+    position: relative;
 }
 
 .navbar {
@@ -78,7 +83,7 @@ ul li::selection {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .navbar-content h3 {
@@ -112,7 +117,7 @@ ul li::selection {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1; 
+    z-index: 1;
 }
 
 
@@ -125,53 +130,231 @@ ul li::selection {
 }
 
 .alternate-text::after {
-    content: "Designer";  
+    content: "Designer";
     animation: typing 4s steps(9, end) infinite, blink 1s step-end infinite;
 }
 
 /* Typing effect */
 @keyframes typing {
-    0% { content: "D"; }
-    3% { content: "De"; }
-    6% { content: "Des"; }
-    9% { content: "Desi"; }
-    12% { content: "Desig"; }
-    15% { content: "Design"; }
-    18% { content: "Designe"; }
-    21% { content: "Designer "; } 
-    24% { content: "Designer "; } 
+    0% {
+        content: "D";
+    }
 
-    27% { content: "Designe"; }
-    30% { content: "Design"; }
-    33% { content: "Desig"; }
-    36% { content: "Desi"; }
-    39% { content: "Des"; }
-    42% { content: "De"; }
-    45% { content: "D"; }
-    48% { content: ""; }
+    3% {
+        content: "De";
+    }
 
-    51% { content: "D"; }
-    54% { content: "De"; }
-    57% { content: "Dev"; }
-    60% { content: "Deve"; }
-    63% { content: "Devel"; }
-    66% { content: "Develo"; }
-    69% { content: "Develop"; }
-    72% { content: "Develope"; }
-    75% { content: "Developer"; }
-    78% { content: "Develope"; }
-    81% { content: "Develop"; }
-    84% { content: "Develo"; }
-    87% { content: "Devel"; }
-    90% { content: "Deve"; }
-    93% { content: "Dev"; }
-    96% { content: "De"; }
-    99% { content: "D"; }
-    100% { content: ""; }
+    6% {
+        content: "Des";
+    }
+
+    9% {
+        content: "Desi";
+    }
+
+    12% {
+        content: "Desig";
+    }
+
+    15% {
+        content: "Design";
+    }
+
+    18% {
+        content: "Designe";
+    }
+
+    21% {
+        content: "Designer ";
+    }
+
+    24% {
+        content: "Designer ";
+    }
+
+    27% {
+        content: "Designe";
+    }
+
+    30% {
+        content: "Design";
+    }
+
+    33% {
+        content: "Desig";
+    }
+
+    36% {
+        content: "Desi";
+    }
+
+    39% {
+        content: "Des";
+    }
+
+    42% {
+        content: "De";
+    }
+
+    45% {
+        content: "D";
+    }
+
+    48% {
+        content: "";
+    }
+
+    51% {
+        content: "D";
+    }
+
+    54% {
+        content: "De";
+    }
+
+    57% {
+        content: "Dev";
+    }
+
+    60% {
+        content: "Deve";
+    }
+
+    63% {
+        content: "Devel";
+    }
+
+    66% {
+        content: "Develo";
+    }
+
+    69% {
+        content: "Develop";
+    }
+
+    72% {
+        content: "Develope";
+    }
+
+    75% {
+        content: "Developer";
+    }
+
+    78% {
+        content: "Develope";
+    }
+
+    81% {
+        content: "Develop";
+    }
+
+    84% {
+        content: "Develo";
+    }
+
+    87% {
+        content: "Devel";
+    }
+
+    90% {
+        content: "Deve";
+    }
+
+    93% {
+        content: "Dev";
+    }
+
+    96% {
+        content: "De";
+    }
+
+    99% {
+        content: "D";
+    }
+
+    100% {
+        content: "";
+    }
 }
 
 @keyframes blink {
-    50% { border-color: transparent; }
+    50% {
+        border-color: transparent;
+    }
 }
+
+/* about section */
+
+div.about {
+    display: flex;
+    width: 65%;
+    margin: 100px auto;
+}
+
+div.about-img img {
+    border-radius: 5px;
+}
+
+.about-img {
+    position: relative;
+}
+
+div.about-img::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 8px solid #555555;
+    border-radius: 5px;
+}
+
+
+/* div.about-img::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+
+.about-img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.about-img .overlay .overlay-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.about-img .overlay .overlay-icons i {
+    font-size: 22px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.about-img .overlay .overlay-icons i:hover {
+    color: #ff305b;
+    transform: translateY(-5px);
+}
+
 
 
