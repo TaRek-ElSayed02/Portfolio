@@ -429,11 +429,14 @@ padding: 0;
 
 .services{
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.services-content h2{
+.services-content h2 ,.portfolio-content h2{
     font-size: 40px;
     font-weight: 700;
     font-family: "Source Sans Pro", sans-serif;
@@ -442,7 +445,7 @@ padding: 0;
     position: relative;
 }
 
-.services-content h2::before {
+.services-content h2::before ,.portfolio-content h2::before {
     content: "";
     position: absolute;
     top:160px;
@@ -453,7 +456,7 @@ padding: 0;
     margin-right: 10px;
 }
 
-.services-content h2::after {
+.services-content h2::after ,.portfolio-content h2::after {
     content: "";
     padding: 5px;
     position: absolute;
@@ -467,13 +470,13 @@ padding: 0;
 
 .cards{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 80%;
     margin: auto;
     margin-top: 80px;
 }
-
 
 .cards .card{
     text-align: center;
@@ -519,4 +522,159 @@ padding: 0;
 
 .cards .card:hover i{
     transform: scale(1.2);
+}
+
+/* portfolio */
+
+.portfolio{
+    width: 100%;
+   min-height: 70vh;
+    margin-bottom: 100px;
+}
+
+.ulPortfolio{
+   margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.ulPortfolio li{
+    font-size: 16px;
+    font-weight: 400;
+    padding:3px 16px;
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    color: #555555;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.cardsPortfolio{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.cardsPortfolio .cardPortfolio {
+    width: 30%;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    z-index: 0; /* Ensure the card stays above other elements */
+    transition: transform 0.5s ease-in-out; /* Optional: add transition for other effects like transform */
+}
+
+.cardsPortfolio .cardPortfolio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Default state: invisible overlay */
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out; /* Apply the transition for opacity */
+}
+
+.cardsPortfolio .cardPortfolio:hover::after {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.cardsPortfolio .cardPortfolio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+/* numbers */
+
+.secnum{
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+.numbers{
+    width: 64%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.numbers div i{
+    color: #ff305b;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.numbers div h3{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-bottom: 10px;
+}
+
+.numbers div p{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "source sans pro", sans-serif;
+    color: #555555;
+}
+/* numbers */
+
+
+
+
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 23vh;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-icons i{
+    margin: 0 8px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-icons i:hover{
+    color: #ff305b;
+}
+
+.footer p{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+.footer p span a{
+    color: #ff305b;
+    cursor: pointer;
+    text-decoration: none;
 }
