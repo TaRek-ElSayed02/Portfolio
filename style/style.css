@@ -319,7 +319,10 @@
 div.about {
     display: flex;
     width: 67%;
-    margin: 100px auto;
+    margin: auto;
+    margin-top: 800px ;
+    margin-bottom: 100px;
+    justify-content: space-between;
 }
 
 div.about-img img {
@@ -330,7 +333,7 @@ div.about-img img {
     position: relative;
 }
 
-div.about-img::before {
+div.about-img::before { 
     content: "";
     position: absolute;
     top: -25px;
